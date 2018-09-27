@@ -1,5 +1,6 @@
 package com.eventmanagerapi.eventmanagerapi.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ public class AbstractEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY )
     @Column(nullable = false,updatable = false)
     protected Long id;
+    @JsonIgnore
     @CreationTimestamp
     @Column(updatable = false)
     protected Instant created;
