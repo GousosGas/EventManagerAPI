@@ -14,7 +14,7 @@ public class Event extends AbstractEntity{
     private String description;
     private ZonedDateTime startTime;
     private ZonedDateTime endTime;
-    private ZoneId zonedId;
+    private ZoneId zoneId;
     private Boolean started;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -84,12 +84,12 @@ public class Event extends AbstractEntity{
         this.endTime = endTime;
     }
 
-    public ZoneId getZonedId() {
-        return zonedId;
+    public ZoneId getZoneId() {
+        return zoneId;
     }
 
-    public void setZonedId(ZoneId zonedId) {
-        this.zonedId = zonedId;
+    public void setZoneId(ZoneId zoneId) {
+        this.zoneId = zoneId;
     }
 
     public Boolean getStarted() {
