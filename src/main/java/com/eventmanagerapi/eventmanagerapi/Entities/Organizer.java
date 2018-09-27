@@ -2,10 +2,12 @@ package com.eventmanagerapi.eventmanagerapi.Entities;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.Objects;
 import java.util.Set;
 
 @Entity
+@Table(name="organizer")
 public class Organizer extends AbstractEntity {
 
     private String name;

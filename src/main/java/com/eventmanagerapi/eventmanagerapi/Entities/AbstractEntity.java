@@ -9,7 +9,7 @@ import java.time.Instant;
 public class AbstractEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO )
+    @GeneratedValue(strategy = GenerationType.IDENTITY )
     @Column(nullable = false,updatable = false)
     protected Long id;
     @CreationTimestamp

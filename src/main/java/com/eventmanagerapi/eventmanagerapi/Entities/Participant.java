@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table(name="participant")
 public class Participant extends AbstractEntity{
 
     @Column(nullable = false)

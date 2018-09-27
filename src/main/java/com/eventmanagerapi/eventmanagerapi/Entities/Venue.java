@@ -1,9 +1,11 @@
 package com.eventmanagerapi.eventmanagerapi.Entities;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Objects;
 
 @Entity
+@Table(name="venue")
 public class Venue extends AbstractEntity {
 
     private String name;
