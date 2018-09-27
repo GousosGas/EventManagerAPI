@@ -1,8 +1,11 @@
 package com.eventmanagerapi.eventmanagerapi.Entities;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import javax.persistence.*;
 import java.util.Objects;
 
+@JsonPropertyOrder("resourceId")
 @Entity
 @Table(name="participant")
 public class Participant extends AbstractEntity{
