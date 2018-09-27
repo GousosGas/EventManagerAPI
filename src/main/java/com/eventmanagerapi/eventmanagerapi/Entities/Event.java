@@ -1,5 +1,7 @@
 package com.eventmanagerapi.eventmanagerapi.Entities;
 
+import org.springframework.data.rest.core.annotation.RestResource;
+
 import javax.persistence.*;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -25,6 +27,7 @@ public class Event extends AbstractEntity{
     private Set<Participant> participants;
 
     @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @RestResource(exported = false)
     private Venue venue;
 
 
@@ -100,6 +103,9 @@ public class Event extends AbstractEntity{
         this.started = started;
     }
 
+    public Long getResourceId(){
+       return this.id;
+    }
 
     @Override
     public boolean equals(Object obj) {

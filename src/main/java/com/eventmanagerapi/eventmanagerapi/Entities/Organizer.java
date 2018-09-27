@@ -30,6 +30,9 @@ public class Organizer extends AbstractEntity {
     public void setName(String name) {
         this.name = name;
     }
+    public Long getResourceId(){
+        return this.id;
+    }
 
     @Override
     public boolean equals(Object obj) {
