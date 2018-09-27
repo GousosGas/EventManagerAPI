@@ -1,11 +1,9 @@
 package com.eventmanagerapi.eventmanagerapi.Entities;
 
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
 public class Participant extends AbstractEntity{
 
     @Column(nullable = false)
